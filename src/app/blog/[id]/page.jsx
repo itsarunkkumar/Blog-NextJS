@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation';
 
 async function getData(id){
   const res = await fetch(`https://api.vercel.app/blog/${id}`,{
-      cache: "no-store"
+    cache: "no-store"
   });
   if(!res.ok){
     return notFound();
